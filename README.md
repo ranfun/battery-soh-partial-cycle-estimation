@@ -33,10 +33,11 @@ a physics-informed neural network with a monotonicity-constrained loss.
 - `battery_soh_transformer.ipynb` — Transformer-based variant on the Severson dataset.
 - `results/` — figures from the reported experiments (loss curves, SoH trajectory
   tracking, predicted-vs-actual scatter, model comparison).
+- `data/cleaned_dataset/` — the cleaned NASA PCoE battery discharge-cycle dataset
+  (per-cycle CSVs + `metadata.csv`).
 
 ## Setup
 
-MATLAB with the Deep Learning Toolbox. Place the cleaned NASA PCoE dataset at
-`data/cleaned_dataset/` relative to this folder (each script resolves this path
-automatically), then run `preprocess_battery.m` followed by any of the
-`train_*.m` / `ablation_*.m` scripts.
+MATLAB with the Deep Learning Toolbox. The cleaned NASA PCoE dataset is included
+directly in this repo at `data/cleaned_dataset/`, so `preprocess_battery.m` can be run
+as-is, followed by any of the `train_*.m` / `ablation_*.m` scripts.
